@@ -160,7 +160,7 @@ class BaseResearcher:
     def _get_search_params(self) -> Dict[str, Any]:
         """Get search parameters based on analyst type"""
         params = {
-            "search_depth": "basic",
+            "search_depth": "advanced",
             "include_raw_content": False,
             "max_results": 5
         }

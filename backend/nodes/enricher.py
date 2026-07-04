@@ -25,7 +25,7 @@ class Enricher:
     async def fetch_single_content(self, url: str) -> Dict[str, str]:
         """Fetch raw content for a single URL."""
         try:
-            result = await self.tavily_client.extract(url)
+            result = await self.tavily_client.extract(url, extract_depth="advanced")
             if result and result.get('results'):
                 return {url: result['results'][0].get('raw_content', '')}
         except Exception as e:
